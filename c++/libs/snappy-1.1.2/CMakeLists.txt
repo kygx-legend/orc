@@ -10,6 +10,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+add_library (snappy-obj OBJECT
+  snappy.cc
+  snappy-sinksource.cc
+  snappy-stubs-internal.cc
+  snappy-c.cc
+  )
+
 add_library (snappy STATIC
   snappy.cc
   snappy-sinksource.cc
@@ -17,4 +24,4 @@ add_library (snappy STATIC
   snappy-c.cc
   )
 
-install (TARGETS snappy DESTINATION lib)
+#install (TARGETS snappy DESTINATION lib)

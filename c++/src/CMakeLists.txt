@@ -152,6 +152,10 @@ add_library (orc STATIC
   Timezone.cc
   TypeImpl.cc
   Vector.cc
+  $<TARGET_OBJECTS:protobuf-obj>
+  $<TARGET_OBJECTS:zlib-obj>
+  $<TARGET_OBJECTS:snappy-obj>
+  $<TARGET_OBJECTS:lz4-obj>
   )
 
 install(TARGETS orc DESTINATION lib)

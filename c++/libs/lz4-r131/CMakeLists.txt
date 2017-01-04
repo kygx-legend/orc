@@ -16,8 +16,12 @@ project(lz4 C)
 
 set(VERSION "r131")
 
+add_library (lz4-obj OBJECT
+  lib/lz4.c
+  )
+
 add_library (lz4 STATIC
   lib/lz4.c
   )
 
-install(TARGETS lz4 DESTINATION lib)
+#install(TARGETS lz4 DESTINATION lib)
